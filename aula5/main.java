@@ -24,7 +24,6 @@ public class Main {
 	  Pedido.adicionarItem(item1);
 	  Pedido.adicionarItem(item2);
 	  
-	  // here
 	  for(Item item : Pedido.getPedido()) {
 		    System.out.println(item.getProduto().getNome() + " x" + item.getQuantidade());
 	  }
