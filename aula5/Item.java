@@ -1,40 +1,29 @@
 public class Item {
-  private int idItem;
-  private int idPedido;
-  private int idProduto;
+  private Produto produto;
+  private int quantidade;
 
-  public Item(int idItem, int idPedido, int idProduto) {
-    this.idItem = idItem;
-    this.idPedido = idPedido;
-    this.idProduto = idProduto;
+  public Item(Produto produto, int quantidade) {
+    this.produto = produto;
+    this.quantidade = quantidade;
   }
 
-  public int getIdItem() {
-    return idItem;
+  public Produto getProduto() {
+    return produto;
   }
 
-  public void setIdItem(int idItem) {
-    this.idItem = idItem;
+  public void setProduto(Produto produto) {
+    this.produto = produto;
   }
 
-  public int getIdPedido() {
-    return idPedido;
+  public int getQuantidade() {
+    return quantidade;
   }
 
-  public void setIdPedido(int idPedido) {
-    this.idPedido = idPedido;
-  }
-
-  public int getIdProduto() {
-    return idProduto;
-  }
-
-  public void setIdProduto(int idProduto) {
-    this.idProduto = idProduto;
+  public void setQuantidade(int quantidade) {
+    this.quantidade = quantidade;
   }
   
-  public double calcularSubtotal() {
-	  // implementar
-	  return 0;
+  public double calcularSubTotal() {
+	  return quantidade * this.produto.getPreco();
   }
 }
