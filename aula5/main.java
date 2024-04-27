@@ -13,6 +13,25 @@ public class Main {
 	  boolean cnpjValido = ((PessoaJuridica) empresa1).validarCnpj();
 	  if(cnpjValido == true) System.out.println("CNPJ VALIDO!");
 	  else JOptionPane.showMessageDialog(null, "CNPJ INVALIDO!", "alerta", JOptionPane.ERROR_MESSAGE);
-	
+	  
+	  Pedido pedido1 = new Pedido(1, "Pendente", pessoa1.getId());
+	  
+	  Produto produto1 = new Produto(1, "Refrigerante", "Pitchula", 19.99, 20);
+	  Produto produto2 = new Produto(2, "Bolacha", "Trakinas", 5.99, 639);
+	  Item item1 = new Item(produto1, 3);
+	  Item item2 = new Item(produto2, 5);
+	  
+	  Pedido.adicionarItem(item1);
+	  Pedido.adicionarItem(item2);
+	  
+	  // here
+	  for(Item item : Pedido.getPedido()) {
+		    System.out.println(item.getProduto().getNome() + " x" + item.getQuantidade());
+	  }
+	  
+	  double total = pedido1.calcularTotal();
+	  System.out.printf("Total: R$");
+	  System.out.printf("%.2f\n", total);
+	  
   }
 }
