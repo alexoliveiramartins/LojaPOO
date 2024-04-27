@@ -25,7 +25,7 @@ public class Main {
 	  Pedido.adicionarItem(item2);
 	  
 	  for(Item item : Pedido.getPedido()) {
-		    System.out.println(item.getProduto().getNome() + " x" + item.getQuantidade());
+		System.out.println(item.getProduto().getNome() + " x" + item.getQuantidade());
 	  }
 	  
 	  double total = pedido1.calcularTotal();
