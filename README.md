@@ -12,7 +12,7 @@ Este é o repositório do projeto LojaPOO realizado na matéria de Programação
    
 3. Compile o projeto:
 ```bash
-javac Main.java"
+javac Main.java
 ```
 
 4. Execute o projeto: 
